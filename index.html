@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+		<title>
+			MyStack
+		</title>
+
+	</head>
+	<body>
+		<div class="container">
+		  <div class="calendar light">
+		    <div class="calendar_header">
+		      <h1 class = "header_title">MyStack</h1>
+		    </div>
+		    <div class="calendar_plan">
+		      <div class="cl_plan">
+		        <div class="cl_title">It's <span id="time"></span> on <span id="date"></span></div>
+		        <div class="cl_copy" id="datetime">5 Hours and 20 Mins</div>
+		      </div>
+		    </div>
+		    <div class="calendar_events">
+		      <p class="ce_title">Stacked Tasks</p>
+		      <div class="event_item">
+		        <div class="ei_Dot dot_active"></div>
+		        <div class="ei_Title">11:00 AM</div>
+		        <div class="ei_Copy">Class</div>
+		      </div>
+		      <div class="event_item">
+		        <div class="ei_Dot"></div>
+		        <div class="ei_Title">12:30 pm</div>
+		        <div class="ei_Copy">Lunch meeting for VGDC Creative</div>
+		      </div>
+		      <div class="event_item">
+		        <div class="ei_Dot"></div>
+		        <div class="ei_Title">2:00 pm</div>
+		        <div class="ei_Copy">OS Quest Meeting</div>
+		      </div>
+		      <div class="event_item">
+		        <div class="ei_Dot"></div>
+		        <div class="ei_Title">5:00 pm</div>
+		        <div class="ei_Copy">Workshop</div>
+		      </div>
+		      <div class="event_item">
+		        <div class="ei_Dot"></div>
+		        <div class="ei_Title">7:00 PM</div>
+		        <div class="ei_Copy">Study 120</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>	
+	</body>
+	<script>
+		var dt = new Date();
+		var dateTime =  dt.toLocaleString();
+		var timestrings = dateTime.split(',');
+		document.getElementById("time").innerHTML = timestrings[1];
+		document.getElementById("date").innerHTML = timestrings[0];
+	</script>
+</html>
